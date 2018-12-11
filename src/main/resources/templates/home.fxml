@@ -5,12 +5,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="vBox" prefHeight="305.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+<VBox fx:id="vBox" prefHeight="450.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="277.0" prefWidth="500.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="openCameraFXML" layoutX="13.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedOpenCamera" prefHeight="26.0" prefWidth="567.0" text="Ouvrir la camera" />
-            <ImageView fx:id="ImageViewFXML" fitHeight="232.0" fitWidth="567.0" layoutX="14.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="333.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedTakePhoto" prefHeight="26.0" prefWidth="186.0" text="Prendre une photo" />
+            <ImageView fx:id="ImageViewFXML" fitHeight="386.0" fitWidth="509.0" layoutX="11.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
          </children>
     </AnchorPane>
   </children>
