@@ -53,7 +53,7 @@ modules.xml
 # Log file
 *.log
 
-# BlueJ files
+# BlueJ assets
 *.ctxt
 
 # Mobile Tools for Java (J2ME)

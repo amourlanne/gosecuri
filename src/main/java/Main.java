@@ -4,6 +4,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -18,16 +19,16 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        // load the native OpenCV library
+        // chargement de la librairie Opencv nativement
         nu.pattern.OpenCV.loadShared();
+        // lancement de l'application
         launch(args);
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
-        try
-        {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("templates/home.fxml"));
             Parent root = null;
 
@@ -36,15 +37,14 @@ public class Main extends Application {
 
             primaryStage.setScene(new Scene(root));
             primaryStage.setTitle("GoSecuri");
-            primaryStage.setX(780);
-            primaryStage.setY(50);
+            primaryStage.setX(500);
+            primaryStage.setY(100);
+            primaryStage.getIcons().add(new Image("assets/img/logo.png"));
             primaryStage.setResizable(false);
             primaryStage.show();
 
             primaryStage.setOnCloseRequest((we -> controller.setClosed()));
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
