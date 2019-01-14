@@ -1,4 +1,12 @@
+import com.google.api.gax.paging.Page;
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.cloud.storage.Blob;
+import com.google.cloud.storage.Bucket;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.cloud.StorageClient;
 import controller.HomeController;
+import entity.database.Firebase;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +18,10 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.opencv.core.Core;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * Class Main
@@ -27,6 +39,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
+        Firebase.connect();
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("templates/home.fxml"));
@@ -47,6 +61,5 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }

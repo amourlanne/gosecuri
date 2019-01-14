@@ -1,6 +1,7 @@
 package controller;
 
 
+import entity.database.Firebase;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -30,6 +31,9 @@ public class HomeController implements Initializable {
 
     @FXML
     private ImageView ImageViewFXML;
+
+    @FXML
+    private ImageView ImageViewFXML1;
 
     // un timer pour enregistrer le stream de la vidéo
     private ScheduledExecutorService timer;
