@@ -11,7 +11,7 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
 /**
- * Class User
+ * Class Emprunt
  * Created by Alexis on 13/12/2018
  */
 public final class Utils {

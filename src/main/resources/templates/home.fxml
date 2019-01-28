@@ -11,7 +11,8 @@
          <children>
             <Button layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedTakePhoto" prefHeight="26.0" prefWidth="171.0" text="S'identifier" />
             <ImageView fx:id="ImageViewFXML" fitHeight="386.0" fitWidth="509.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ImageViewFXML1" fitHeight="171.0" fitWidth="171.0" layoutX="534.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ImageViewFXML1" fitHeight="171.0" fitWidth="171.0" layoutX="534.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="534.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedCompare" prefHeight="26.0" prefWidth="171.0" text="Firebase" />
          </children>
     </AnchorPane>
   </children>

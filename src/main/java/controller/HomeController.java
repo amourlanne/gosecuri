@@ -2,6 +2,7 @@ package controller;
 
 
 import entity.database.Firebase;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -16,6 +17,9 @@ import org.opencv.objdetect.Objdetect;
 import org.opencv.videoio.VideoCapture;
 import utils.Utils;
 
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -100,9 +104,20 @@ public class HomeController implements Initializable {
         if (this.cameraActive) {
             int idx = 0;
             for ( Rect rect : this.facesList ) {
-                Imgcodecs.imwrite( "src/main/resources/assets/faces/face" + idx + ".jpg", new Mat(this.frame,rect) );
+                Imgcodecs.imwrite( "src/main/resources/assets/faces/appli/face" + idx + ".jpg", new Mat(this.frame,rect) );
+                this.ImageViewFXML1.setImage(Utils.mat2Image(new Mat(this.frame,rect)));
                 ++ idx;
             }
+        }
+    }
+
+    @FXML
+    void onMouseClickedCompare(MouseEvent event) throws IOException {
+        List<Image> images = Firebase.getAllImage();
+        int idx = 0;
+        for (Image image : images ) {
+            ImageIO.write(SwingFXUtils.fromFXImage(image, null), "jpg", new File("src/main/resources/assets/faces/database/firebase" + idx + ".jpg"));
+            ++ idx;
         }
     }
 
